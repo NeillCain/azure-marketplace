@@ -154,6 +154,7 @@ download_install_deb()
 {
     log "[download_install_deb] starting download of package"
     local DOWNLOAD_URL="https://artifacts.elastic.co/downloads/kibana/kibana-$KIBANA_VERSION-amd64.deb"
+    # https://artifacts.elastic.co/downloads/kibana/kibana-6.2.1-amd64.deb
     curl -o "kibana-$KIBANA_VERSION.deb" "$DOWNLOAD_URL"
     log "[download_install_deb] installing downloaded package"
     sudo dpkg -i "kibana-$KIBANA_VERSION.deb"
@@ -360,7 +361,7 @@ install_sequence()
     log "[install_sequence] Starting installation"
     download_install_deb
     configuration_and_plugins
-    install_start_service
+    #install_start_service
     log "[install_sequence] Finished installation"
 }
 
