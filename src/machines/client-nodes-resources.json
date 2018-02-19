@@ -36,7 +36,10 @@
       "tags": {
         "provider": "[toUpper(parameters('elasticTags').provider)]"
       },
-      "properties": { }
+      "properties": { },
+      "sku": {
+        "name": "Aligned"
+      }
     },
     {
       "name": "[concat(variables('namespace'), copyindex(), '-vm-creation')]",
