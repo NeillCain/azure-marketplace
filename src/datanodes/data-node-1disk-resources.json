@@ -86,7 +86,7 @@
             "value": {
               "disks": [
                 {
-                  "name": "datadisk1",
+                  "name": "[concat(variables('namespace'), copyindex(), substring(guid(subscription().subscriptionId), 0, 5),'datadisk1')]",
                   "diskSizeGB": "[parameters('storageSettings').diskSize]",
                   "lun": 0,                  
                   "caching": "None",
